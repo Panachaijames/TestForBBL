@@ -29,7 +29,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Run and Test
-        run: mvn clean test
+        run: mvn clean test package
     
   docker-build-and-push:
       needs: build-and-test
